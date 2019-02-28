@@ -1,0 +1,5 @@
+- name: startup_disabled
+  systemd: name=* enabled=no
+- name: startup_enable
+  service: name={{item}} enabled=yes
+  with_items: "{{startup}}"
