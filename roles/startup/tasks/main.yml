@@ -1,5 +1,5 @@
-- name: startup_disabled
-  systemd: name=* enabled=no
+#- name: startup_disabled
+#  shell: systemctl list-unit-files -t service | awk '{print $1}' | xargs -i -t systemctl disable {}
 - name: startup_enable
   service: name={{item}} enabled=yes
   with_items: "{{startup}}"
