@@ -1,5 +1,12 @@
-#- name: startup_disabled
-#  shell: systemctl list-unit-files -t service | awk '{print $1}' | xargs -i -t systemctl disable {}
+- name: startup_disabled
+  shell: systemctl list-unit-files -t service | awk '{print $1}'|grep service|grep -v "@"
+  changed_when: False
+  register: disablelist
+
+- name: debugresult
+  service: name={{item}} enabled=no
+  with_items: "{{disablelist.stdout_lines}}"
+
 - name: startup_enable
   service: name={{item}} enabled=yes
   with_items: "{{startup}}"

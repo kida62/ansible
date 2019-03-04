@@ -1,0 +1,3 @@
+- name: debug
+  debug: msg={{item}}
+  with_items: "{{test}}"

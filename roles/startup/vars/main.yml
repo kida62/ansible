@@ -1,10 +1,7 @@
 startup:
  - auditd
  - crond
- - irqbalance
  - kdump
- - messagebus
- - postfix
  - rc-local
  - rsyslog
  - sshd
