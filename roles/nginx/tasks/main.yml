@@ -1,0 +1,11 @@
+- name: "copy repo"
+  copy: src=nginx.repo dest=/etc/yum.repos.d
+
+- name: "nginx install"
+  yum: name=nginx state=latest
+
+- name: "nginx startup"
+  service: name=nginx enabled=yes
+
+- name: "nginx start"
+  service: name=nginx state=started
