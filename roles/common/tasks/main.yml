@@ -1,0 +1,5 @@
+- name: "copy repo"
+  copy: src=disableipv6.conf dest=/etc/sysctl.d/disable_ipv6.conf
+
+- name: "disable反映"
+  shell: sysctl -p/etc/sysctl.d/disable_ipv6.conf

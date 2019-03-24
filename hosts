@@ -1,8 +1,9 @@
-[test]
+[testserver]
 dm-tst-01
 dm-tst-02
 dm-tst-03
 dm-tst-04
-
-[zabbix]
 dm-zab-01
+
+#[test]
+#localhost

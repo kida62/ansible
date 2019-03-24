@@ -1,5 +1,7 @@
-- hosts: zabbix
+- hosts: all
   roles:
-#   - update
+#   - common
+   - update
 #   - startup
-   - nginx
+#   - nginx
+#   - zabbix

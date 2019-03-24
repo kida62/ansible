@@ -1,0 +1,2 @@
+- name: "test"
+  yum: name=httpd list=yes

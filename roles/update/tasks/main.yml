@@ -1,2 +1,2 @@
-- name: "yum update"
+- name: Check if rpm is already installed
   yum: name=* state=latest
